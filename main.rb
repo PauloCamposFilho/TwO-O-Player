@@ -16,7 +16,7 @@ last_to_play = player1
 
 puts "#{player1.name} vs #{player2.name}! You each start with #{Player.starting_score} lives!"
 
-while player1.current_score > 0 && player2.current_score > 0  
+while player1.current_score > 0 && player2.current_score > 0
   question = Question.new()
   puts question.text
   print "#{last_to_play.name} > "
@@ -26,7 +26,7 @@ while player1.current_score > 0 && player2.current_score > 0
     puts "Oof, #{last_to_play.name}! You answered #{answer} but the actual answer was #{question.answer}. Lives remaining: #{last_to_play.current_score}"
   else
     puts "Well done, #{last_to_play.name}! Right on! You still have #{last_to_play.current_score} lives remaining"
-  end  
+  end
   puts "---- NEW TURN ----"
   if last_to_play == player2
     last_to_play = player1
@@ -39,7 +39,7 @@ puts "Game over!"
 if player1.current_score > 0
   winner = player1
 else
-  winner = player2  
+  winner = player2
 end
 puts "Congratulations #{winner.name}! You had #{winner.current_score} lives left! a #{winner.current_score} - 0 victory!"
 exit 0

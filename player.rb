@@ -1,15 +1,15 @@
 class Player
-  attr_accessor :name, :lives
+  attr_reader :name, :lives
   INITIAL_LIVES = 3
   def initialize(name)
     @name = name
     @lives = INITIAL_LIVES
   end
   def lose_life
-    self.lives -= 1
+    @lives -= 1
   end
   def current_score
-    self.lives
+    @lives
   end
   def self.starting_score
     INITIAL_LIVES
